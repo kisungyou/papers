@@ -1,6 +1,6 @@
 0. Add the package
    Don't forget to run
-   > 'addpath(genpath(pwd))'
+   >> addpath(genpath(pwd))
    when you are navigating this package here.
 
 1. Workflow 
