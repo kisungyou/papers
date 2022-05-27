@@ -8,9 +8,7 @@
       - the list of available functions, and 
       - some examples with our library.
   * This library is associated with the following paper:  
-  [You and Park (2021).  
-  Re-visiting Riemannian geometry of symmetric positive definite matrices for the analysis of functional connectivity.  
-  *NeuroImage*][1].
+  [You and Park (2021). Re-visiting Riemannian geometry of symmetric positive definite matrices for the analysis of functional connectivity. *NeuroImage*][1].
   
   
 ### (2) CORRbox
