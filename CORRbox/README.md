@@ -7,8 +7,8 @@ the space of correlation matrices as a quotient of SPD manifold under the affine
 ### 1. Requirements
 This package requires the following MATLAB modules,
 
-  - Optimization toolbox
-  - Statistics and Machine Learning Toolbox
+  - [Optimization toolbox][1]
+  - [Statistics and Machine Learning Toolbox][2]
   
 for fully using the capabilities delivered in the package.
 
@@ -51,3 +51,6 @@ When you have CORR-valued data, first it needs to be wrapped as a specific struc
 | **`example_central`** | compare two measures of central tendency |
 | **`example_clustvis`** | clustering and data visualization |
 | **`example_eqdist`** | test equality of distributions |
+
+[1] : https://www.mathworks.com/products/optimization.html
+[2] : https://www.mathworks.com/products/statistics.html
