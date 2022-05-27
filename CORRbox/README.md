@@ -52,5 +52,5 @@ When you have CORR-valued data, first it needs to be wrapped as a specific struc
 | **`example_clustvis`** | clustering and data visualization |
 | **`example_eqdist`** | test equality of distributions |
 
-[1] : https://www.mathworks.com/products/optimization.html
-[2] : https://www.mathworks.com/products/statistics.html
+[1]: https://www.mathworks.com/products/optimization.html
+[2]: https://www.mathworks.com/products/statistics.html
