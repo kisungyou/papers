@@ -16,23 +16,28 @@ Our package supports two types of metrics
   * AIRM : Affine-Invariant Riemannian Metric, and
   * LERM : Log-Euclidean Riemannian Metric
   
-in the sense that AIRM is an 'intrinsic' geometry while LERM is governed by 'extrinsic' geometry on the manifold of symmetric and positive-definite matrices.
+in the sense that AIRM is an **_intrinsic_** geometry while LERM is governed by **_extrinsic_** geometry on the manifold of symmetric and positive-definite matrices.
 
-### 3. Available functions in 'src' folder (in an alphabetical order)
-  - *spd_clustval*   : a measure of validating cluster quality
-  - *spd_eqtest*     : testing equality of two distributions based on permutation testing.
-  - *spd_eqtestelem* : elementwise testing equality of two distributions based on resampling.
-  - *spd_icca*       : extracts independent covariance components.
-  - *spd_initialize* : wrap 3d array into a struct after data checking.
-  - *spd_kmeans*     : perform k-means clustering on SPD manifold.
-  - *spd_mean*       : compute Fréchet mean and variation.
-  - *spd_mse2signal* : computes mean squared error (MSE) for two given signals.
-  - *spd_pdist*      : compute pairwise distance between data pairs.
-  - *spd_pga*        : Principal Geodesic Analysis.
-  - *spd_smooth*     : apply kernel smoothing on SPD matrices.
-  - *spd_smoothcv*   : cross-validation for bandwidth selection of 'spd_smooth'.
+### 3. Available functions in `src` folder (in an alphabetical order)
+
+| Algorithm | Description |
+| :------- | :----------- |
+|**`spd_clustval`**| a measure of validating cluster quality|
+|**`spd_eqtest`**| testing equality of two distributions based on permutation testing.|
+|**`spd_eqtestelem`**| element-wise testing equality of two distributions based on resampling.|
+|**`spd_icca`**| extracts independent covariance components.|
+|**`spd_initialize`**| wrap 3d array into a struct after data checking.|
+|**`spd_kmeans`**| perform $k$-means clustering on SPD manifold.|
+|**`spd_mean`**| compute Fréchet mean and variation.|
+|**`spd_mse2signal`**| computes mean squared error (MSE) for two given signals.|
+|**`spd_pdist`**| compute pairwise distance between data pairs.|
+|**`spd_pga`**| Principal Geodesic Analysis.|
+|**`spd_smooth`**| apply kernel smoothing on SPD matrices.|
+|**`spd_smoothcv`**| cross-validation for bandwidth selection of 'spd_smooth'.|
   
 ### 4. Example codes
-  - *example_eqdist* : test equality of distributions under both AIRM and LERM.
-  - *example_mean*   : compare intrinsic and extrinsic Frechet means
-  - *example_kmeans* : applying k-means algorithm and cluster validity index.
+| Script | Description |
+| :------- | :----------- |
+|**`example_eqdist.m`** | test equality of distributions under both AIRM and LERM.|
+|**`example_mean`**   | compare intrinsic and extrinsic Fréchet means.|
+|**`example_kmeans`** | applying k-means algorithm and cluster validity index.|
