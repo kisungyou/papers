@@ -7,7 +7,7 @@ the space of correlation matrices as a quotient of SPD manifold under the affine
 ### 1. Requirements
 This package requires the following MATLAB modules,
 
-  - [Optimization toolbox][1]
+  - [Optimization Toolbox][1]
   - [Statistics and Machine Learning Toolbox][2]
   
 for fully using the capabilities delivered in the package.
