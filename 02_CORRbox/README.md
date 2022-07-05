@@ -12,17 +12,26 @@ This package requires the following MATLAB modules,
   
 for fully using the capabilities delivered in the package.
 
-### 2. Add the package
+### 2. Download
+
+In order to download this folder only, please use the following commands.
+```
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/kisungyou/papers
+cd papers/
+git checkout master -- 02_CORRbox
+```
+
+### 3. Add the package
 Don't forget to run 
 ```
 addpath(genpath(pwd))
 ``` 
 on MATLAB console when you are navigating this package here.
 
-### 3. Workflow 
+### 4. Workflow 
 When you have CORR-valued data, first it needs to be wrapped as a specific struct that is repeatedly used for all exposed functions in our package, using **corr_initialize** function. Without initialization would functions listed below not work.
 
-### 4. Available functions in `src` folder (in an alphabetical order)
+### 5. Available functions in `src` folder (in an alphabetical order)
   
 | Algorithm | Description |
 | :------- | :----------- |
@@ -44,7 +53,7 @@ When you have CORR-valued data, first it needs to be wrapped as a specific struc
 |**`corr_test2wass`**| two-sample hypothesis test using Wasserstein distance.|
 
   
-### 5. Example codes
+### 6. Example codes
 
 | Script | Description |
 | :------- | :----------- |

@@ -1,16 +1,26 @@
 # SPDtoolbox
 
-### 0. Add the package
+### 1. Download
+
+In order to download this folder only, please use the following commands.
+```
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/kisungyou/papers
+cd papers/
+git checkout master -- 01_SPDtoolbox
+```
+
+### 2. Add the package
 Don't forget to run 
 ```
 addpath(genpath(pwd))
 ``` 
 on MATLAB console when you are navigating this package here.
 
-### 1. Workflow 
+
+### 3. Workflow 
 When you have SPD-valued data, first it needs to be wrapped as a specific struct that is repeatedly used for all exposed functions in our package, using **spd_initialize** function. Without initialization would functions listed below not work.
 
-### 2. Choice of Metric : AIRM and LERM
+### 4. Choice of Metric : AIRM and LERM
 Our package supports two types of metrics
 
   * AIRM : Affine-Invariant Riemannian Metric, and
@@ -18,7 +28,7 @@ Our package supports two types of metrics
   
 in the sense that AIRM is an **_intrinsic_** geometry while LERM is governed by **_extrinsic_** geometry on the manifold of symmetric and positive-definite matrices.
 
-### 3. Available functions in `src` folder (in an alphabetical order)
+### 5. Available functions in `src` folder (in an alphabetical order)
 
 | Algorithm | Description |
 | :------- | :----------- |
@@ -35,7 +45,7 @@ in the sense that AIRM is an **_intrinsic_** geometry while LERM is governed by 
 |**`spd_smooth`**| apply kernel smoothing on SPD matrices.|
 |**`spd_smoothcv`**| cross-validation for bandwidth selection of 'spd_smooth'.|
   
-### 4. Example codes
+### 6. Example codes
 | Script | Description |
 | :------- | :----------- |
 |**`example_eqdist.m`** | test equality of distributions under both AIRM and LERM.|

@@ -1,9 +1,18 @@
 # TopLSM
 
-### Motivation
+### 1. Motivation
 In network analysis, a class of [**latent space models**](https://sites.stat.washington.edu/raftery/Research/latent.html) is often used to learn latent representation of nodes given an instance of of a graph/network. This repo aims at demonstrating how population-level analysis given multiple latent space embeddings can benefit from tools of [topological data analysis (TDA)](https://en.wikipedia.org/wiki/Topological_data_analysis).
 
-### Workflow
+### 2. Download
+
+In order to download this folder only, please use the following commands.
+```
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/kisungyou/papers
+cd papers/
+git checkout master -- 03_TopLSM
+```
+
+### 3. Workflow
 
 There are two main scripts - `example_ER.R` and `example_SBM.R` - that replicate 
 examples from the manuscript. Both deliver end-to-end analysis, including
@@ -13,12 +22,12 @@ examples from the manuscript. Both deliver end-to-end analysis, including
 - learning topological representations from estimated embeddings, and 
 - performing hypothesis testing and clustering.
 
-### Notes
+### 4. Notes
 
 * In order to control simulation settings such as numbers of networks, link 
 probabilities, and bounds for network sizes, change the values in `parameters` section.
 * The `src.R` file contains auxiliary functions that are called from two example scripts.
-* We strongly recommend to run these scripts in Rstudio for path setting.
+* We strongly recommend to run these scripts in **Rstudio** for path setting.
 
 
 [2]: https://en.wikipedia.org/wiki/Stochastic_block_model
