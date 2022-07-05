@@ -1,4 +1,4 @@
-# Codes and Examples from Papers
+# Codes for papers
 
 ### (1) SPDtoolbox
   * `MATLAB` library to study functional connectivity represented as symmetric postiive-definite (SPD) matrices. 
