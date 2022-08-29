@@ -1,4 +1,4 @@
-# TopLSM
+# Comparing multiple latent space embeddings using topological analysis
 
 ### 1. Motivation
 In network analysis, a class of [**latent space models**](https://sites.stat.washington.edu/raftery/Research/latent.html) is often used to learn latent representation of nodes given an instance of of a graph/network. This repo aims at demonstrating how population-level analysis given multiple latent space embeddings can benefit from tools of [topological data analysis (TDA)](https://en.wikipedia.org/wiki/Topological_data_analysis).
