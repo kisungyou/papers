@@ -18,7 +18,7 @@ In order to download this folder only, please use the following commands.
 ```
 git clone --depth 1 --filter=blob:none --no-checkout https://github.com/kisungyou/papers
 cd papers/
-git checkout master -- 02_CORRbox
+git checkout master -- 02-CORRbox
 ```
 
 ### 3. Add the package

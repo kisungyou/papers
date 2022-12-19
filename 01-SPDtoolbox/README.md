@@ -6,7 +6,7 @@ In order to download this folder only, please use the following commands.
 ```
 git clone --depth 1 --filter=blob:none --no-checkout https://github.com/kisungyou/papers
 cd papers/
-git checkout master -- 01_SPDtoolbox
+git checkout master -- 01-SPDtoolbox
 ```
 
 ### 2. Add the package
