@@ -15,6 +15,8 @@ available folders and markdown files within each folder for detailed description
     -   adding the path,
     -   the list of available functions, and
     -   some examples with our library.
+-   This library is associated with the following paper:\
+    [You and Park (2022).  Geometric learning of functional brain network on the correlation manifold. *Scientific Reports*](https://doi.org/10.1038/s41598-022-21376-0).
 
 ### (01) SPDtoolbox
 
