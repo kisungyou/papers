@@ -1,4 +1,4 @@
-# Online Resources for Papers
+# Resources for Papers
 
 This repo contains a set of scripts/packages/supplementary materials that are associated with the 
 manuscripts and papers. Please see the list below for introduction to 
