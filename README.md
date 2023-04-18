@@ -4,6 +4,11 @@ This repo contains a set of scripts/packages/supplementary materials that are as
 manuscripts and papers. Please see the list below for introduction to 
 available folders and markdown files within each folder for detailed description.
 
+### (04) splaplace
+
+- This folder contains an online supplementary pdf file for the manuscript titled "*On the Spherical Laplace Distribution*".
+
+
 ### (03) TopLSM
 
 -   A set of `R` scripts to replicate examples from a manuscript titled "*Multiple Latent Spaces Comparison Using Topological Analysis*".
