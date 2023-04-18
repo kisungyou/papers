@@ -1,6 +1,6 @@
-# Codes for papers
+# Online Resources for Papers
 
-This repo contains a set of scripts/packages that are associated with the 
+This repo contains a set of scripts/packages/supplementary materials that are associated with the 
 manuscripts and papers. Please see the list below for introduction to 
 available folders and markdown files within each folder for detailed description.
 
