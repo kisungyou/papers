@@ -1,6 +1,0 @@
----
-title: "Speed of Light"
-output: github_document
----
-
-This document will soon be updated.
