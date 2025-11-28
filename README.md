@@ -2,7 +2,8 @@
 
 This repo contains a set of scripts/packages/supplementary materials that are associated with the 
 manuscripts and papers. Please see the list below for introduction to 
-available folders and markdown files within each folder for detailed description.
+available folders and relevant files within each folder for detailed description.
+
 ### (04) splaplace
 
 - This folder contains an online supplementary pdf file for the paper titled ["On the Spherical Laplace Distribution"](https://ieeexplore.ieee.org/document/10224108) at the *26th International Conference on Information Fusion*.
