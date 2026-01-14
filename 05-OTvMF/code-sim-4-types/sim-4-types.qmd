@@ -57,7 +57,7 @@ south_low <- aux_density(vec_theta, mu_south, kappa_low)
 south_high <- aux_density(vec_theta, mu_south, kappa_high)
 ```
 
-```{r generate-viz, fig.align="center", out.width="95%"}
+```{r generate-viz, fig.align="center", out.width="90%"}
 # graphical setting
 cex_main  = 1.5
 cex_lab   = 1.25
@@ -173,7 +173,7 @@ L2_embed <- cmdscale(L2_obj, k=2)
 
 Finally, we can visualize the MDS embeddings under two different geometries.
 
-```{r embedding-viz, fig.align="center", out.width="95%"}
+```{r embedding-viz, fig.align="center", out.width="90%"}
 # setup
 vec_theta = seq(from=0, to=2*pi, length.out=100)
 col_scale = viridis(4, option = "viridis")

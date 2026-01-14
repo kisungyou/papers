@@ -88,7 +88,7 @@ title(main="south-high", family="sans", cex.main=cex_main)
 ```
 
 <img src="sim-4-types_files/figure-commonmark/generate-viz-1.png"
-style="width:95.0%" data-fig-align="center" />
+style="width:90.0%" data-fig-align="center" />
 
 Since four types seem heterogeneous clearly, now proceed to generate
 randomly perturbed versions of each distribution type. We will generate
@@ -191,4 +191,4 @@ plot(L2_embed, pch=19, cex=cex_pts, col=vec_scale,
 ```
 
 <img src="sim-4-types_files/figure-commonmark/embedding-viz-1.png"
-style="width:95.0%" data-fig-align="center" />
+style="width:90.0%" data-fig-align="center" />

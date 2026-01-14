@@ -60,7 +60,7 @@ lines(vec_theta, density2, col = "blue", lwd = 2)
 
 <img
 src="demo-interpolation_files/figure-commonmark/define-densities-1.png"
-style="width:80.0%" data-fig-align="center" />
+style="width:90.0%" data-fig-align="center" />
 
 Before moving further, let’s set some common visualization settings.
 
@@ -159,4 +159,4 @@ for (i in 2:n_scale) {
 ```
 
 <img src="demo-interpolation_files/figure-commonmark/vizfin-1.png"
-style="width:95.0%" data-fig-align="center" />
+style="width:90.0%" data-fig-align="center" />

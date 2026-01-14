@@ -74,7 +74,7 @@ points(pts_all[,1], pts_all[,2], pch=19, col=rep(1:4, each=n_per_group), cex=.5)
 ```
 
 <img src="sim-reduce_files/figure-commonmark/data-generate-1.png"
-style="width:95.0%" data-fig-align="center" />
+style="width:90.0%" data-fig-align="center" />
 
 ## Fit
 
@@ -194,7 +194,7 @@ axis(1, at = 1:9, labels = 2:10, cex.axis=cex_axis)
 ```
 
 <img src="sim-reduce_files/figure-commonmark/plot-ic-1.png"
-style="width:95.0%" data-fig-align="center" />
+style="width:90.0%" data-fig-align="center" />
 
 As the paper discusses, $K=4$ shows drastic patterns for reduction
 methods, being an *elbow* point in terms of all information criteria.

@@ -12,7 +12,6 @@ execute:
   freeze: auto
 knitr:
   opts_chunk:
-    fig.path: "demo-interpolation_files/figure-commonmark/"
     dpi: 400
 ---
 
@@ -39,7 +38,7 @@ Now, we define two densities that are distinct. Let's check their means and conc
 are distinct enough. Since the distributions are defined on $\mathbb{S}^1$, we will 
 visualize them not on the unit circle but with the angle $\theta \in [0, 2\pi)$.
 
-```{r define-densities, cache=TRUE, fig.align="center", out.width="80%"}
+```{r define-densities, cache=TRUE, fig.align="center", out.width="90%"}
 # angles and concentrations
 theta1 <- (2 / 4) * pi
 theta2 <- (2 - 3 / 4) * pi
@@ -122,7 +121,7 @@ for (i in 2:(n_scale - 1)) {
 
 Finally, let's graphically compare two interpolations.
 
-```{r vizfin, cache=TRUE, fig.align="center", out.width="95%"}
+```{r vizfin, cache=TRUE, fig.align="center", out.width="90%"}
 par(mfrow=c(1,2), pty='s')
 
 # interpolation via L2

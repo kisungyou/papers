@@ -41,7 +41,7 @@ source("auxiliary.R")
 
 We will generate 4 vMF distributions whose locations are equidistant to each other. For the "east" and "west" directions, we put high concentration. The "north" and "south" are with low $\kappa$ values.
 
-```{r data-generate, out.width="95%", fig.align="center"}
+```{r data-generate, out.width="90%", fig.align="center"}
 # basic setting
 vec_mu = c(0, pi/2, pi, 3*pi/2)
 small_kappa = 10
@@ -148,7 +148,7 @@ for (i in 1:9){
 
 Now we present a single figure that summarizes the performance of different reduction tools.
 
-```{r plot-ic, out.width="95%", fig.align="center"}
+```{r plot-ic, out.width="90%", fig.align="center"}
 par(mfrow=c(1,3), pty="s")
 
 # graphical settings
