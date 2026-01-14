@@ -1,6 +1,11 @@
 # Simulated Example: Model Reduction
 Kisung You
 
+- [Setup](#setup)
+- [Data Generation](#data-generation)
+- [Fit](#fit)
+- [Visualize](#visualize)
+
 ## Setup
 
 This notebook is to replicate the second simulated example where the
@@ -196,3 +201,5 @@ methods, being an *elbow* point in terms of all information criteria.
 While not achieving the lowest value, at least it provides a significant
 hint at structural properties of a plausible range for the number of
 mixture components.
+
+    [1] TRUE

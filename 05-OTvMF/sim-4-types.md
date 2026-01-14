@@ -1,6 +1,11 @@
 # Simulated Example: 4 Types of vMF Distributions
 Kisung You
 
+- [Setup](#setup)
+- [Generate](#generate)
+- [Pairwise Distance and MDS](#pairwise-distance-and-mds)
+- [Visualization of Embeddings](#visualization-of-embeddings)
+
 ## Setup
 
 This notebook is to replicate the first simulated example of 4 different

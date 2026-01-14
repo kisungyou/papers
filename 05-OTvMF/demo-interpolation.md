@@ -1,6 +1,11 @@
 # Interpolation of vMF Distributions
 Kisung You
 
+- [Setup](#setup)
+- [Two Densities](#two-densities)
+- [Computation](#computation)
+- [Visualize](#visualize)
+
 ## Setup
 
 A major difference between the standard $L_2$ structure and the proposed

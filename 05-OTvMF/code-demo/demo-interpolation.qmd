@@ -9,6 +9,10 @@ execute:
   echo: true
   warning: false
   message: false
+  freeze: auto
+knitr:
+  opts_chunk:
+    fig.path: "demo-interpolation_files/figure-commonmark/"
 ---
 
 ## Setup
