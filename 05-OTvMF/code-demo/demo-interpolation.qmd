@@ -13,6 +13,7 @@ execute:
 knitr:
   opts_chunk:
     fig.path: "demo-interpolation_files/figure-commonmark/"
+    dpi: 400
 ---
 
 ## Setup

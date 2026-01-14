@@ -10,6 +10,9 @@ execute:
   warning: false
   message: false
   freeze: auto
+knitr:
+  opts_chunk:
+    dpi: 400
 ---
 
 ## Setup
