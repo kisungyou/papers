@@ -1,27 +1,16 @@
----
-title: "Simulated Example: Model Reduction"
-author: "Kisung You"
-format:
-  gfm:
-    toc: true
-    toc-depth: 2
-execute:
-  echo: true
-  warning: false
-  message: false
----
-
+# Simulated Example: Model Reduction
+Kisung You
 
 ## Setup
 
-This notebook is to replicate the second simulated example where the ground truth 
-is a mixture of 4 vMF distributions. We start from fitting a model with larger 
-number of component. Then, the proposed WL-based model reduction methods are applied 
-in order to verify whether the methods are actually capable of identifying 
-the small number of components correctly without accessing the original training data.
+This notebook is to replicate the second simulated example where the
+ground truth is a mixture of 4 vMF distributions. We start from fitting
+a model with larger number of component. Then, the proposed WL-based
+model reduction methods are applied in order to verify whether the
+methods are actually capable of identifying the small number of
+components correctly without accessing the original training data.
 
-
-```{r setup}
+``` r
 # Load packages
 library(pacman)
 pacman::p_load(maotai,
@@ -32,12 +21,13 @@ pacman::p_load(maotai,
 source("auxiliary.R")
 ```
 
-
 ## Data Generation
 
-We will generate 4 vMF distributions whose locations are equidistant to each other. For the "east" and "west" directions, we put high concentration. The "north" and "south" are with low $\kappa$ values.
+We will generate 4 vMF distributions whose locations are equidistant to
+each other. For the “east” and “west” directions, we put high
+concentration. The “north” and “south” are with low $\kappa$ values.
 
-```{r data-generate, out.width="95%", fig.align="center"}
+``` r
 # basic setting
 vec_mu = c(0, pi/2, pi, 3*pi/2)
 small_kappa = 10
@@ -78,14 +68,20 @@ lines(cos(grid_angle), sin(grid_angle))
 points(pts_all[,1], pts_all[,2], pch=19, col=rep(1:4, each=n_per_group), cex=.5)
 ```
 
+<img src="sim-reduce_files/figure-commonmark/data-generate-1.png"
+style="width:95.0%" data-fig-align="center" />
+
 ## Fit
 
-The true data-generating process has $K=4$ components. We fit the mixture model with 
-vMF distributions across varying number of components from $K=2$ to $K=10$ where the 
-expectation is that the model with $K=4$ should be selected as the best one. For the 
-reduction methods based on greedy optimization and partitional methods---$k$-medoids and hierarchical clustering--- will start from a larger model ($K=10$) and reduce sequentially up to the smallest ($K=2$) model. 
+The true data-generating process has $K=4$ components. We fit the
+mixture model with vMF distributions across varying number of components
+from $K=2$ to $K=10$ where the expectation is that the model with $K=4$
+should be selected as the best one. For the reduction methods based on
+greedy optimization and partitional methods—$k$-medoids and hierarchical
+clustering— will start from a larger model ($K=10$) and reduce
+sequentially up to the smallest ($K=2$) model.
 
-```{r fit-base}
+``` r
 # filename to save or load
 file_name = paste0("computed_fits_",small_kappa,"_",large_kappa,".RData")
 if (file.exists(file_name)){
@@ -114,10 +110,15 @@ if (file.exists(file_name)){
 }
 ```
 
-Since all models are learned, now we compare their performances by extracting 
-information criteria values. In the manuscript, only the Bayesian information criterion (BIC) metrics are reported since BIC is consistent, not prone to favor larger models as AIC does, and seems to be standard for reporting in the mixture modeling literature. For fair comparison, here we also provide Akaike information criterion (AIC) and Hannan-Quinn information criterion (HQIC) values for reference.
+Since all models are learned, now we compare their performances by
+extracting information criteria values. In the manuscript, only the
+Bayesian information criterion (BIC) metrics are reported since BIC is
+consistent, not prone to favor larger models as AIC does, and seems to
+be standard for reporting in the mixture modeling literature. For fair
+comparison, here we also provide Akaike information criterion (AIC) and
+Hannan-Quinn information criterion (HQIC) values for reference.
 
-```{r extract-ic}
+``` r
 # extract {A,B,HQ}IC values
 vals_BIC <- array(0,c(9,4))
 vals_AIC <- array(0,c(9,4))
@@ -142,9 +143,10 @@ for (i in 1:9){
 
 ## Visualize
 
-Now we present a single figure that summarizes the performance of different reduction tools.
+Now we present a single figure that summarizes the performance of
+different reduction tools.
 
-```{r plot-ic, out.width="95%", fig.align="center"}
+``` r
 par(mfrow=c(1,3), pty="s")
 
 # graphical settings
@@ -186,16 +188,11 @@ legend("topright", legend = c("Exact", "Greedy", "Hclust", "Kmedoids") , col = t
 axis(1, at = 1:9, labels = 2:10, cex.axis=cex_axis)
 ```
 
-As the paper discusses, $K=4$ shows drastic patterns for reduction methods, being an *elbow* point in terms of all information criteria. While not achieving the lowest value, at least it provides a significant hint at structural properties of a plausible range for the number of  mixture components.
+<img src="sim-reduce_files/figure-commonmark/plot-ic-1.png"
+style="width:95.0%" data-fig-align="center" />
 
-```{r hidden, eval=TRUE, echo=FALSE}
-html <- "sim-reduce.md"
-
-if (file.exists(html)) {
-  file.copy(
-    from = html,
-    to   = file.path("..", html),
-    overwrite = TRUE
-  )
-}
-```
+As the paper discusses, $K=4$ shows drastic patterns for reduction
+methods, being an *elbow* point in terms of all information criteria.
+While not achieving the lowest value, at least it provides a significant
+hint at structural properties of a plausible range for the number of
+mixture components.

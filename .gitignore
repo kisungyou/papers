@@ -1,4 +1,5 @@
 # ignore all html files
+*.html
 
 # ignore R-related
 *.Rhistory

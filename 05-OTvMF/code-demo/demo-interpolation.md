@@ -1,25 +1,22 @@
----
-title: "Interpolation of vMF Distributions"
-author: "Kisung You"
-format:
-  gfm:
-    toc: true
-    toc-depth: 2
-execute:
-  echo: true
-  warning: false
-  message: false
----
+# Interpolation of vMF Distributions
+Kisung You
+
+- [Setup](#setup)
+- [Two Densities](#two-densities)
+- [Computation](#computation)
+- [Visualize](#visualize)
 
 ## Setup
 
-A major difference between the standard $L_2$ structure and the proposed $\mathcal{WL}$ geometry is how we formalize *difference* between two vMF distributions. For such, 
-we will consider two vMF distributions on $\mathbb{S}^1 \subset \mathbb{R}^2$ and 
-compare how they differ when interpolating two densities. We need 
-[maotai](https://cran.r-project.org/package=maotai) package as well as some helper 
-routines available, which can be loaded as follows.
+A major difference between the standard $L_2$ structure and the proposed
+$\mathcal{WL}$ geometry is how we formalize *difference* between two vMF
+distributions. For such, we will consider two vMF distributions on
+$\mathbb{S}^1 \subset \mathbb{R}^2$ and compare how they differ when
+interpolating two densities. We need
+[maotai](https://cran.r-project.org/package=maotai) package as well as
+some helper routines available, which can be loaded as follows.
 
-```{r setup}
+``` r
 # Load packages
 library(pacman)
 pacman::p_load(maotai)
@@ -30,11 +27,12 @@ source("auxiliary.R")
 
 ## Two Densities
 
-Now, we define two densities that are distinct. Let's check their means and concentrations 
-are distinct enough. Since the distributions are defined on $\mathbb{S}^1$, we will 
-visualize them not on the unit circle but with the angle $\theta \in [0, 2\pi)$.
+Now, we define two densities that are distinct. Let’s check their means
+and concentrations are distinct enough. Since the distributions are
+defined on $\mathbb{S}^1$, we will visualize them not on the unit circle
+but with the angle $\theta \in [0, 2\pi)$.
 
-```{r define-densities, cache=TRUE, fig.align="center", out.width="80%"}
+``` r
 # angles and concentrations
 theta1 <- (2 / 4) * pi
 theta2 <- (2 - 3 / 4) * pi
@@ -60,9 +58,13 @@ plot(
 lines(vec_theta, density2, col = "blue", lwd = 2)
 ```
 
-Before moving further, let's set some common visualization settings.
+<img
+src="demo-interpolation_files/figure-commonmark/define-densities-1.png"
+style="width:80.0%" data-fig-align="center" />
 
-```{r viz-settings}
+Before moving further, let’s set some common visualization settings.
+
+``` r
 # number of interpolation steps
 n_scale <- 40
 
@@ -89,9 +91,10 @@ labels <- expression(0, pi/2, pi, 3*pi/2, 2*pi)
 
 ## Computation
 
-Now, we compute $L_2$-based and $\mathcal{WL}$-based interpolations at once.
+Now, we compute $L_2$-based and $\mathcal{WL}$-based interpolations at
+once.
 
-```{r interpolations, cache=TRUE}
+``` r
 # vertical interpolation via L2
 for (i in 2:(n_scale - 1)) {
   densities_vert[[i]] <-
@@ -115,9 +118,9 @@ for (i in 2:(n_scale - 1)) {
 
 ## Visualize
 
-Finally, let's graphically compare two interpolations.
+Finally, let’s graphically compare two interpolations.
 
-```{r vizfin, cache=TRUE, fig.align="center", out.width="95%"}
+``` r
 par(mfrow=c(1,2), pty='s')
 
 # interpolation via L2
@@ -155,15 +158,7 @@ for (i in 2:n_scale) {
 }
 ```
 
+<img src="demo-interpolation_files/figure-commonmark/vizfin-1.png"
+style="width:95.0%" data-fig-align="center" />
 
-```{r hidden, eval=TRUE, echo=FALSE}
-html <- "demo-interpolation.md"
-
-if (file.exists(html)) {
-  file.copy(
-    from = html,
-    to   = file.path("..", html),
-    overwrite = TRUE
-  )
-}
-```
+    [1] TRUE

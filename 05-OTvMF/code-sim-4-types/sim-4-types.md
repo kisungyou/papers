@@ -1,24 +1,18 @@
----
-title: "Simulated Example: 4 Types of vMF Distributions"
-author: "Kisung You"
-format:
-  gfm:
-    toc: true
-    toc-depth: 2
-execute:
-  echo: true
-  warning: false
-  message: false
----
+# Simulated Example: 4 Types of vMF Distributions
+Kisung You
+
+- [Setup](#setup)
+- [Generate](#generate)
+- [Pairwise Distance and MDS](#pairwise-distance-and-mds)
+- [Visualization of Embeddings](#visualization-of-embeddings)
 
 ## Setup
 
-This notebook is to replicate the first simulated example of 4 different types of vMF 
-measures that are distinct to each other and show how two geometries differ in 
-terms of their low-dimensional embeddings. 
+This notebook is to replicate the first simulated example of 4 different
+types of vMF measures that are distinct to each other and show how two
+geometries differ in terms of their low-dimensional embeddings.
 
-
-```{r setup}
+``` r
 # Load packages
 library(pacman)
 pacman::p_load(maotai,
@@ -29,13 +23,12 @@ pacman::p_load(maotai,
 source("auxiliary.R")
 ```
 
-
 ## Generate
 
-We will generate a set of idealized model distributions first to visually check 
-whether they are indeed distinct.
+We will generate a set of idealized model distributions first to
+visually check whether they are indeed distinct.
 
-```{r generate, cache=TRUE}
+``` r
 # parameters and coordinates
 set.seed(5)
 theta_north = runif(1, 15*pi/8, 17*pi/8)
@@ -53,7 +46,7 @@ south_low <- aux_density(vec_theta, mu_south, kappa_low)
 south_high <- aux_density(vec_theta, mu_south, kappa_high)
 ```
 
-```{r generate-viz, fig.align="center", out.width="95%"}
+``` r
 # graphical setting
 cex_main  = 1.5
 cex_lab   = 1.25
@@ -94,10 +87,14 @@ axis(1, at=ticks, labels=labels, cex.axis=cex_axis, cex.lab=cex_lab)
 title(main="south-high", family="sans", cex.main=cex_main)
 ```
 
-Since four types seem heterogeneous clearly, now proceed to generate randomly 
-perturbed versions of each distribution type. We will generate 100 per each type.
+<img src="sim-4-types_files/figure-commonmark/generate-viz-1.png"
+style="width:95.0%" data-fig-align="center" />
 
-```{r generate-perturbed, cache=FALSE}
+Since four types seem heterogeneous clearly, now proceed to generate
+randomly perturbed versions of each distribution type. We will generate
+100 per each type.
+
+``` r
 # parameters and coordinates
 set.seed(2)
 theta_north = runif(1, 15*pi/8, 17*pi/8)
@@ -138,13 +135,13 @@ for (i in 1:n_per_group){
 
 ## Pairwise Distance and MDS
 
-For visualization purpose, we will use multidimensional scaling (MDS), which is 
-the simplest form of embedding given a complete pairwise distance matrix among 
-all entities under consideration. Let's compute pairwise distances using 
-$L_2$ and $\mathcal{WL}$ metrics and then apply MDS onto $\mathbb{R}^2$.
+For visualization purpose, we will use multidimensional scaling (MDS),
+which is the simplest form of embedding given a complete pairwise
+distance matrix among all entities under consideration. Let’s compute
+pairwise distances using $L_2$ and $\mathcal{WL}$ metrics and then apply
+MDS onto $\mathbb{R}^2$.
 
-
-```{r distance-compute, cache=FALSE}
+``` r
 # file to load
 file_load = "computed_pdist.RData"
 if (file.exists(file_load)){
@@ -167,9 +164,10 @@ L2_embed <- cmdscale(L2_obj, k=2)
 
 ## Visualization of Embeddings
 
-Finally, we can visualize the MDS embeddings under two different geometries.
+Finally, we can visualize the MDS embeddings under two different
+geometries.
 
-```{r embedding-viz, fig.align="center", out.width="95%"}
+``` r
 # setup
 vec_theta = seq(from=0, to=2*pi, length.out=100)
 col_scale = viridis(4, option = "viridis")
@@ -192,15 +190,7 @@ plot(L2_embed, pch=19, cex=cex_pts, col=vec_scale,
      cex.lab=cex_lab, main="Embedding with L2")
 ```
 
+<img src="sim-4-types_files/figure-commonmark/embedding-viz-1.png"
+style="width:95.0%" data-fig-align="center" />
 
-```{r hidden, eval=TRUE, echo=FALSE}
-html <- "sim-4-types.md"
-
-if (file.exists(html)) {
-  file.copy(
-    from = html,
-    to   = file.path("..", html),
-    overwrite = TRUE
-  )
-}
-```
+    [1] TRUE

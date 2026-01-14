@@ -1,6 +1,6 @@
 # README
 
-This repo contains `R` notebooks and compiled `html` documents for the following paper:
+This repo contains `R` notebooks and compiled `md` documents for the following paper:
 
 > ["Learning over von Mises--Fisher distributions via a Wasserstein-like-geometry"](
 https://doi.org/10.48550/arXiv.2504.14164)
@@ -10,13 +10,13 @@ written jointly by Kisung You (CUNY Baruch College), Dennis Shung (Mayo Clinic),
 
 ### Composition
 
-There are 3 html files 
+There are 3 md files 
 
-- `demo-interpolation.html`, 
-- `sim-4-types.html`, and 
-- `sim-reduce.html`
+- `demo-interpolation.md`, 
+- `sim-4-types.md`, and 
+- `sim-reduce.md`
 
-in the top level, which are compiled quarto documents in the style of typical notebooks. Each html file 
+in the top level, which are compiled quarto documents in the style of typical notebooks. Each `md` file 
 was generated from running `qmd` file under the corresponding folder of the same name. We note that 
 real data examples are excluded for brevity and polyglot workflow that can't be easily handled 
 in a single quarto file without making the code cryptic. Still, these three notebooks use 
