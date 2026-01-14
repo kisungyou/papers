@@ -4,9 +4,18 @@ This repo contains a set of scripts/packages/supplementary materials that are as
 manuscripts and papers. Please see the list below for introduction to 
 available folders and relevant files within each folder for detailed description.
 
+### (05) OTvMF
+
+-   A set of `R` notebooks for the following paper:\
+    ["Learning over von Mises--Fisher distributions via a Wasserstein-like-geometry"](
+https://doi.org/10.48550/arXiv.2504.14164
+).
+-   It contains It contains step-by-step descriptions to replicate examples in the paper along with some precomputed data files.
+
+
 ### (04) splaplace
 
-- This folder contains an online supplementary pdf file for the paper titled ["On the Spherical Laplace Distribution"](https://ieeexplore.ieee.org/document/10224108) at the *26th International Conference on Information Fusion*.
+-   This folder contains an online supplementary pdf file for the paper titled ["On the Spherical Laplace Distribution"](https://ieeexplore.ieee.org/document/10224108) at the *26th International Conference on Information Fusion*.
 
 
 ### (03) TopLSM
