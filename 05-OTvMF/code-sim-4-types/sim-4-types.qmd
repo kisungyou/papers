@@ -192,16 +192,3 @@ plot(L2_embed, pch=19, cex=cex_pts, col=vec_scale,
      xlab="MDS1", ylab="MDS2", cex.axis=cex_axis, 
      cex.lab=cex_lab, main="Embedding with L2")
 ```
-
-
-```{r hidden, eval=TRUE, echo=FALSE}
-html <- "sim-4-types.md"
-
-if (file.exists(html)) {
-  file.copy(
-    from = html,
-    to   = file.path("..", html),
-    overwrite = TRUE
-  )
-}
-```

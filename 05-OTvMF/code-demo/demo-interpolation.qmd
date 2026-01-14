@@ -158,16 +158,3 @@ for (i in 2:n_scale) {
         col = color_scale[i], lwd = 2)
 }
 ```
-
-
-```{r hidden, eval=TRUE, echo=FALSE}
-html <- "demo-interpolation.md"
-
-if (file.exists(html)) {
-  file.copy(
-    from = html,
-    to   = file.path("..", html),
-    overwrite = TRUE
-  )
-}
-```

@@ -12,19 +12,18 @@ written jointly by Kisung You (CUNY Baruch College), Dennis Shung (Mayo Clinic),
 
 There are 3 md files 
 
-- `demo-interpolation.md`, 
-- `sim-4-types.md`, and 
-- `sim-reduce.md`
+- [`demo-interpolation.md`](code-demo/demo-interpolation.md), 
+- [`sim-4-types.md`](code-sim-4-types/sim-4-types.md), and 
+- [`sim-reduce.md`](code-sim-reduce/sim-reduce.md).
 
-in the top level, which are compiled quarto documents in the style of typical notebooks. Each `md` file 
-was generated from running `qmd` file under the corresponding folder of the same name. We note that 
+They are compiled from quarto documents with matching names. We note that 
 real data examples are excluded for brevity and polyglot workflow that can't be easily handled 
 in a single quarto file without making the code cryptic. Still, these three notebooks use 
 all major functionalities listed in the table below.
 
 ### Execution
 
-If you want to run `qmd` files, you will need to have `R` installed along with the **[maotai](https://cran.r-project.org/web/packages/maotai/index.html)** package with version `0.3.0` or higher available on CRAN. The package contains following functions 
+If you want to run `qmd` files directly, you will need to have `R` installed along with the **[maotai](https://cran.r-project.org/web/packages/maotai/index.html)** package with version `0.3.0` or higher available on CRAN. The package contains following functions 
 that implement core routines proposed in the paper:
 
 | Function        | Description |

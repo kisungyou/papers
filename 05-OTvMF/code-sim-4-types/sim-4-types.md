@@ -192,5 +192,3 @@ plot(L2_embed, pch=19, cex=cex_pts, col=vec_scale,
 
 <img src="sim-4-types_files/figure-commonmark/embedding-viz-1.png"
 style="width:95.0%" data-fig-align="center" />
-
-    [1] TRUE

@@ -201,5 +201,3 @@ methods, being an *elbow* point in terms of all information criteria.
 While not achieving the lowest value, at least it provides a significant
 hint at structural properties of a plausible range for the number of
 mixture components.
-
-    [1] TRUE

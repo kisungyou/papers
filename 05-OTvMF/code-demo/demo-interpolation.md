@@ -160,5 +160,3 @@ for (i in 2:n_scale) {
 
 <img src="demo-interpolation_files/figure-commonmark/vizfin-1.png"
 style="width:95.0%" data-fig-align="center" />
-
-    [1] TRUE
