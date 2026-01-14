@@ -10,7 +10,7 @@ available folders and relevant files within each folder for detailed description
     ["Learning over von Mises--Fisher distributions via a Wasserstein-like-geometry"](
 https://doi.org/10.48550/arXiv.2504.14164
 ).
--   It contains It contains step-by-step descriptions to replicate examples in the paper along with some precomputed data files.
+-   It contains step-by-step descriptions to replicate examples in the paper along with some precomputed data files.
 
 
 ### (04) splaplace
