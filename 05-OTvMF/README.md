@@ -10,7 +10,13 @@ written jointly by Kisung You (CUNY Baruch College), Dennis Shung (Mayo Clinic),
 
 ### Composition
 
-There are 3 html files in the top level, which are compiled quarto documents in the style of typical notebooks. Each html file 
+There are 3 html files 
+
+- `demo-interpolation.html`, 
+- `sim-4-types.html`, and 
+- `sim-reduce.html`
+
+in the top level, which are compiled quarto documents in the style of typical notebooks. Each html file 
 was generated from running `qmd` file under the corresponding folder of the same name. We note that 
 real data examples are excluded for brevity and polyglot workflow that can't be easily handled 
 in a single quarto file without making the code cryptic. Still, these three notebooks use 
