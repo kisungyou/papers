@@ -6,8 +6,9 @@ available folders and relevant files within each folder for detailed description
 
 ### (06) Wasserstein-Heterogeneity
 
-- A set of `R` notebooks accompanying the paper:
-- In 
+- A set of `R` notebooks accompanying the paper: ["On Heterogeneity in Wasserstein Space"](https://arxiv.org/abs/2603.14815).
+- There are two `.md` files, which replicate the examples from the manuscript. They can be locally run by compiling the corresponding Quarto `.qmd` files.
+
 
 ### (05) OTvMF
 
