@@ -1,0 +1,142 @@
+---
+title: "Example: Synthetic Gaussian Measures"
+author: "Kisung You"
+format:
+  gfm:
+    toc: true
+    toc-depth: 3
+execute:
+  echo: true
+  warning: false
+  message: false
+  freeze: auto
+knitr:
+  opts_chunk:
+    dpi: 400
+---
+
+### Introduction
+
+This notebook reproduces the synthetic Gaussian illustration used in the manuscript. The aim is to generate three groups of probability measures with distinct heterogeneity structures, compute the proposed quantities from the pairwise Wasserstein distances, and visualize the resulting summary and diagnostic figures.
+
+```{r setup}
+rm(list = ls())
+
+library(ggplot2)
+library(patchwork)
+
+source("src.R")
+```
+
+
+### Generate one synthetic data set
+
+We consider axis-aligned Gaussian measures in two dimensions. Group A is tightly concentrated, group B is more diffuse, and group C contains a compact main component together with a separated atypical component. This creates a simple setting in which both global heterogeneity and observation-level eccentricity can be examined.
+
+
+```{r generate-data}
+single <- run_single_dataset_demo(
+  seed = 20260307,
+  n_A = 60,
+  n_B = 60,
+  n_C = 60,
+  alpha = 0.05,
+  top_k = 6,
+  make_base_plots = FALSE,
+  save_plot_data = TRUE,
+  output_dir = NULL
+)
+```
+
+
+### Groupwise heterogeneity summaries
+
+We first inspect the estimated within-group heterogeneity under the squared transform. The table below also includes the analytic target values available from the data-generating model.
+
+```{r group-summary}
+single$summary_sq
+```
+
+The one-sample large-sample summaries against the benchmark null value $D_\psi(\Pi)=0$ are as follows.
+
+```{r one-sample-summary}
+single$one_sample_table
+```
+
+Pairwise group comparisons under the proposed two-sample approximation are given next.
+```{r pairwise-summary}
+single$pairwise_sq
+```
+
+### Build the figure objects
+
+The manuscript reports two figures. The first summarizes the geometry of the simulated measures and the resulting heterogeneity estimates. The second compares the squared and bounded transforms and displays the plug-in stability bound.
+
+```{r  build-figures}
+plots <- make_2d_measure_ggplots(single$plot_data)
+
+p1 <- label_panel(plots$locations, "(a)")
+p2 <- label_panel(plots$representative, "(b)")
+p3 <- label_panel(plots$summary, "(c)")
+p4 <- label_panel(plots$eccentricity, "(d)")
+
+p5 <- label_panel(plots$transform, "(a)")
+p6 <- label_panel(plots$plugin, "(b)")
+
+overview_plot  <- p1 | p2 | p3 | p4
+secondary_plot <- p5 | p6
+```
+
+### Overview of one simulated data set
+
+The first figure summarizes the geometry of the three groups, selected representative measures from the heterogeneous group, the within-group heterogeneity estimates with Wald intervals, and the empirical eccentricities in group C.
+
+```{r figure-overview, out.width="100%", fig.align="center", fig.width=12.5, fig.height=4}
+plot(overview_plot)
+```
+This figure is useful for connecting the global heterogeneity summary to the local observation-wise diagnostics. In particular, the measures with the largest empirical eccentricities should align with the atypical component in group C.
+
+### Transform choice and plug-in stability
+
+The second figure compares the squared transform with the bounded transform
+[
+\psi(t)=\frac{t^2}{t^2+c_0^2},
+]
+where $c_0$ is chosen from the sample pairwise distances, and then examines the plug-in stability bound for the Lipschitz transform $\psi(t)=t$.
+
+```{r figure-secondary, out.width="85%", fig.align="center", fig.width=8, fig.height=4}
+plot(secondary_plot)
+```
+The bounded transform should compress the heterogeneity estimates relative to the squared transform, especially for groups with larger pairwise distances. The plug-in panel should show that the observed approximation error decreases as the inner sample size increases and remains below the theoretical upper bound.
+
+### Transform comparison
+
+For convenience, the table below extracts the groupwise estimates under the squared and bounded transforms.
+```{r transform-table}
+single$transform_table
+```
+
+### Most eccentric observations in group C
+
+The next table records the observations in group C with the largest empirical eccentricities. These are the measures that contribute most strongly to the heterogeneity signal within that group.
+
+```{r top-eccentric}
+single$top_C
+```
+
+The proportion of the top-ranked eccentric observations belonging to the atypical component is
+```{r atypical-proportion}
+single$prop_atypical_topC
+```
+
+### Degenerate comparison example
+
+The following object corresponds to the balanced two-point construction used to illustrate a configuration in which the heterogeneity target is positive but the first-order projection variance can be small or degenerate.
+
+```{r degenerate-example}
+single$degenerate_table
+```
+
+### Remarks
+
+This synthetic example serves three purposes. First, it verifies that the heterogeneity estimator and its standard error behave as expected in a setting with closed-form Wasserstein geometry. Second, it shows that the empirical eccentricities recover the observations responsible for the additional heterogeneity in the mixture group. Third, it illustrates the intended effects of changing the transform and of replacing the ideal measures by plug-in approximations.

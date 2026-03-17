@@ -4,10 +4,14 @@ This repo contains a set of scripts/packages/supplementary materials that are as
 manuscripts and papers. Please see the list below for introduction to 
 available folders and relevant files within each folder for detailed description.
 
+### (06) Wasserstein-Heterogeneity
+
+- A set of `R` notebooks accompanying the paper:
+- In 
+
 ### (05) OTvMF
 
--   A set of `R` notebooks for the following paper:\
-    ["Learning over von Mises--Fisher distributions via a Wasserstein-like-geometry"](
+-   A set of `R` notebooks accompanying the paper: ["Learning over von Mises--Fisher distributions via a Wasserstein-like-geometry"](
 https://doi.org/10.48550/arXiv.2504.14164
 ).
 -   It contains step-by-step descriptions to replicate examples in the paper along with some precomputed data files.
