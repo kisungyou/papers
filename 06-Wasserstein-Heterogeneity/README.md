@@ -10,8 +10,8 @@ written by Kisung You (CUNY Baruch College).
 
 This sub-repository includes two demonstration documents:
 
-- [`demo-simulation.md`](demo-simulation.md), and
-- [`demo-MNIST.md`](demo-MNIST.md).
+- [demo-simulation.md](code/demo-simulation.md), and
+- [demo-MNIST.md](code/demo-MNIST.md).
 
 Each file is compiled from a coresponding Quarto (`.qmd`) document within the `code` folder. Together, 
 they illustrate the main components of the proposed framework:
